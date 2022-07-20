@@ -184,7 +184,7 @@ namespace Emby.Plugins.Douban.Providers
         {
             return Path.Combine(appPaths.CachePath, "douban-people");
         }
-        public Task<HttpResponseInfo> GetImageResponse(string url, CancellationToken cancellationToken)
+        public new Task<HttpResponseInfo> GetImageResponse(string url, CancellationToken cancellationToken)
         {
             return _httpClient.GetResponse(new HttpRequestOptions
             {

@@ -21,13 +21,13 @@ namespace Emby.Plugins.Douban.Providers
 {
     public class ImageProvider : BaseProvider, IRemoteImageProvider, IHasOrder
     {
-        public string Name => "Douban Emby Image Provider";
+        public string Name => "Douban";
         public int Order => 3;
         private readonly IHttpClient _httpClient;
         public ImageProvider(IJsonSerializer jsonSerializer,
-                             ILogger logger) : base(jsonSerializer, logger)
+            IHttpClient httpClient, ILogger logger) : base(jsonSerializer, logger)
         {
-            // empty
+            _httpClient = httpClient;
         }
 
         public async Task<IEnumerable<RemoteImageInfo>> GetImages(BaseItem item, LibraryOptions libraryOptions, CancellationToken cancellationToken)
