@@ -29,7 +29,7 @@ namespace Emby.Plugins.Douban.Services
     {
         private readonly ImageProxyService imageProxyService;
         private readonly IHttpResultFactory resultFactory;
-        private readonly ILogger logger;
+        // private readonly ILogger logger;
 
         /// <summary>
         /// Gets or sets the request context.
@@ -55,7 +55,7 @@ namespace Emby.Plugins.Douban.Services
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        private async Task<object> DoGet(string username, string? password)
+        private Task<object> DoGet(string username, string password)
         {
             //logger.Info($"{url}");
 

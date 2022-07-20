@@ -21,7 +21,7 @@ namespace Emby.Plugins.Douban.Providers
            IRemoteMetadataProvider<Season, SeasonInfo>,
            IRemoteMetadataProvider<Episode, EpisodeInfo>
     {
-        public string Name => "Douban Emby TV Provider";
+        public string Name => "Douban";
         public int Order => 3;
         private readonly IHttpClient _httpClient;
         public TVProvider(IHttpClient http, IJsonSerializer jsonSerializer,

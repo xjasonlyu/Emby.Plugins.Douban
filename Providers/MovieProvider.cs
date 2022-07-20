@@ -16,7 +16,7 @@ namespace Emby.Plugins.Douban.Providers
     public class MovieProvider : BaseProvider, IHasOrder,
         IRemoteMetadataProvider<Movie, MovieInfo>
     {
-        public string Name => "Douban Emby Movie Provider";
+        public string Name => "Douban";
         public int Order => 3;
         private readonly IHttpClient _httpClient;
         public MovieProvider(IHttpClient http, IJsonSerializer jsonSerializer,
